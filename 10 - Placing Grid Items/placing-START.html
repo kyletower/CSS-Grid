@@ -18,7 +18,7 @@
     <div class="item item6">6</div>
     <div class="item item7">7</div>
     <div class="item item8">8</div>
-    <div class="item item8">💩</div>
+    <div class="item poop">💩</div>
     <div class="item item9">9</div>
     <div class="item item10">10</div>
     <div class="item item11">11</div>
@@ -48,6 +48,21 @@
       display: grid;
       grid-gap: 20px;
       grid-template-columns: repeat(5, 1fr);
+    }
+
+    .poop {
+      /* grid-column: span 2;  */
+      /* above is just a shortcut for grid-column-start and grid-column-end as you can see in dev tools */
+      /* grid-column-start: 2; */
+      /* grid-column-end: 5; */
+      /* the above two lines can be simplified to the one line below */
+      grid-column: 2 / 5;
+      /* grid-column: 1 / span 2; */
+      /* grid-column: span 2 / 5; */
+      /* below is sort of like 100% width */
+      /* grid-column: 1 / -1; */
+      grid-row: 3 / 8;
+      background: #BADA55;
     }
   </style>
 </body>
