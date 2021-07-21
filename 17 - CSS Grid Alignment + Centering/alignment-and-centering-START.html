@@ -14,13 +14,13 @@
     <div class="itm itm2">2</div>
     <div class="itm itm3">3</div>
     <div class="itm itm4">4</div>
-    <div class="itm itm5">5</div>
+    <div class="itm itm5">kyle is cool</div>
     <div class="itm itm6">6</div>
     <div class="itm itm7">7</div>
     <div class="itm itm8">8</div>
     <div class="itm itm9">9</div>
     <div class="itm itm10">10</div>
-    <div class="itm itm11">11</div>
+    <!-- <div class="itm itm11">11</div>
     <div class="itm itm12">12</div>
     <div class="itm itm13">13</div>
     <div class="itm itm14">14</div>
@@ -49,7 +49,7 @@
     <div class="itm itm37">37</div>
     <div class="itm itm38">38</div>
     <div class="itm itm39">39</div>
-    <div class="itm itm40">40</div>
+    <div class="itm itm40">40</div> -->
   </div>
 
   <style>
@@ -63,14 +63,40 @@
       align-self:
       justify-self:
 
-      justify-* is row axis
-      align-* is column axis
+      justify-* is row (horizontal) axis
+      align-* is column (vertical) axis
     */
 
     .container {
       display: grid;
       grid-gap: 20px;
-      grid-template-columns: repeat(10, 1fr);
+      /* usually don't put a height here */
+      height: 500px;
+      border: 10px solid var(--yellow);
+      grid-template-columns: repeat(5, 130px);
+      /* grid-template-rows: repeat(5, 100px); */
+      /* justify-items: stretch; */
+      /* justify-items: start; */
+      /* same as flex-start */
+      /* justify-items: end; */
+      /* same as flex-end */
+      /* justify-items: center; */
+      /* align-items: center; */
+      /* combine the two above into the one below */
+      /* place-items: center center; */
+      place-items: stretch stretch;
+      /* stretch, start, end, center, space-around, space-between */
+      justify-content: space-between;
+      align-content: space-between;
+    }
+
+    .itm {
+      background: white;
+    }
+
+    itm5 {
+      justify-self: center;
+      align-self: center;
     }
   </style>
 </body>
