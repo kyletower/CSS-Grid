@@ -29,8 +29,16 @@
 
   <style>
     .container {
+      /* default width is viewport width */
+      /* default height is however high elements are */
       display: grid;
+      height: 600px;
       grid-gap: 20px;
+      border: 10px solid var(--yellow);
+      /* grid-template-columns: 1fr 5fr 1fr; */
+      /* auto will adjust too the widest element in that column  */
+      grid-template-columns: auto 1fr;
+      grid-template-rows: 1fr 10fr 1fr 1fr;
     }
   </style>
 </body>
